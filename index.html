@@ -9,8 +9,7 @@
 <body>
     <header>
         <section class="logo">
-            <h1>Nikita builds</h1>
-            <img src="https://thumbs.dreamstime.com/b/construction-worker-icon-safety-helmet-smiling-face-design-friendly-featuring-simple-great-various-444970397.jpg" alt="Nikita img" class="logo img">
+            <img src="nikita-builds.png" alt="Nikita img" class="logo_img">
         </section>
         <nav>
             <a href=#>Home</a>
@@ -18,10 +17,13 @@
             <a href=#>Contact</a>
         </nav>
     </header>
+
     <main>
         <section class="hero">
-            <h1>Nikita</h1>
+            <h2>Nikita</h2>
+            <img src="director.png" class="director">
             <p>General contractor, Salinas area — fences to faucets</p>
+            <a href=# class="hero-button">Our work</a>
         </section>
 
         <section class="about">
@@ -29,14 +31,83 @@
             <p>Meet Nikita, a general contractor who handles a bit of everything — fence repairs, light fixture swaps, leaky faucets, the works.</p>
             <p>We got a small crew: a painter, an electrician, and a plumber.</p>
         </section>
+
+        <section class="service">
+            <h2>Services</h2>
+
+            <div class="service-container">
+
+                <div class="service-card">
+                    <h3>Plumbing</h3>
+                    <p>Faucets, toilets, and leak repair.</p>
+                </div>
+
+                <div class="service-card">
+                    <h3>Fences</h3>
+                    <p>Wood and chain-link fence installation.</p>
+                </div>
+
+                <div class="service-card">
+                    <h3>Remodeling</h3>
+                    <p>Kitchen and bathroom updates.</p>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="projects-carousel">
+
+            <h2>Our Completed Projects</h2>
+
+            <div class="carousel-container">
+
+                <button id="prev-btn" >&lt;</button>
+
+                <div id="project-card" class="project-card">
+                    <img id="carousel-img">
+                    <h3 id="carousel-title"></h3>
+                    <p id="carousel-desc"></p>
+
+
+                </div>
+
+                <button id="next-btn" >&gt;</button>
+            </div>
+
+
+        </section>
+
     </main>
     <footer>
         <section class="contact">
-            <h2>Contact</h2>
-            <p>Contact us:88005553535</p>
-            <p>agartub2@gmail.com</p>
-            <p>&copy;All rights reserved 2026</p>
+
+            <div class="phone">
+                <h2>Contact Us</h2>
+                <p>Phone: <a href="tel:88005553535">8 (800) 555-35-35</a></p>
+                <p>Email: <a href="mailto:agartub2@gmail.com">agartub2@gmail.com</a></p>    
+            </div>
+
+            <div class="copyright">
+                <p>&copy;All rights reserved 2026</p>
+            </div>
+
         </section>
     </footer>
+
+    <section id="project-modal" class="modal">
+        
+        <div class="modal-content">
+            <button id="close-modal" class="close-btn">&times;</button>
+            <img id="modal-img">
+            <h3 id="modal-title"></h3>
+            <p id="modal-desc"></p>
+
+            <button id="modal-prev-btn">&lt;</button>
+            <button id="modal-next-btn">&gt;</button>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+
 </body>
 </html>
