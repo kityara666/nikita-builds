@@ -154,18 +154,8 @@ nav a:hover {
     align-items: center;
 }
 
-.contact a {
-    color:#ffffff;
-    text-decoration: none;
-    transition: all 0.2 ease;
-}
-
 .contact a:hover {
     color: rgb(0, 38, 206);
-}
-
-.phone {
-
 }
 
 body {

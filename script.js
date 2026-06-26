@@ -64,11 +64,7 @@ closeModalBtn.addEventListener('click', function(){
 });
 
 carouselImageClick.addEventListener('click', function(){
-    const currentProject = projects[currentIndex];
-    modalImg.src = currentProject.image;
-    modalTitle.textContent = currentProject.title;
-    modal.classList.add('modal-open');
-    modalDesc.textContent = currentProject.fullDesc;
+    updateModal(currentIndex);
 });
 
 const modalPrevBtn = document.getElementById('modal-prev-btn');
@@ -80,10 +76,7 @@ modalNextBtn.addEventListener('click', function(){
         currentIndex = 0;
     }
 
-    const currentProject = projects[currentIndex];
-    modalImg.src = currentProject.image;
-    modalTitle.textContent = currentProject.title;
-    modalDesc.textContent = currentProject.fullDesc;
+    updateModal(currentIndex);
 
     showProject(currentIndex);
     });
@@ -94,14 +87,24 @@ modalNextBtn.addEventListener('click', function(){
         currentIndex = projects.length - 1;
     }
 
-    const currentProject = projects[currentIndex];
-    modalImg.src = currentProject.image;
-    modalTitle.textContent = currentProject.title;
-    modalDesc.textContent = currentProject.fullDesc;
+    updateModal(currentIndex);
 
     showProject(currentIndex);
     });
 
+    function updateModal(index) {
+        const currentProject = projects[index];
 
+        modalImg.src = currentProject.image;
+        modalTitle.textContent = currentProject.title;
+        modalDesc.textContent = currentProject.fullDesc;
+        modal.classList.add('modal-open');
 
+ 
+    }
 
+    document.addEventListener('keydown', function(event) {
+        if (event.key === 'Escape' && modal.classList.contains('modal-open')){
+            modal.classList.remove('modal-open');
+        }
+    });
