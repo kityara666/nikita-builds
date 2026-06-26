@@ -303,3 +303,14 @@ footer {
     }
 
 }
+
+.error {
+    color: red;
+}
+.success {
+    color: green;
+}
+
+html {
+    scroll-behavior: smooth;
+}

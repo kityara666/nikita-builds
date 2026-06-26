@@ -13,8 +13,8 @@
         </section>
         <nav>
             <a href=#>Home</a>
-            <a href=#>Services</a>
-            <a href=#>Contact</a>
+            <a href=#service>Services</a>
+            <a href=#contact>Contact</a>
         </nav>
     </header>
 
@@ -23,7 +23,7 @@
             <h2>Nikita</h2>
             <img src="director.png" class="director">
             <p>General contractor, Salinas area — fences to faucets</p>
-            <a href=# class="hero-button">Our work</a>
+            <a href=#projects-carousel class="hero-button">Our work</a>
         </section>
 
         <section class="about">
@@ -32,7 +32,7 @@
             <p>We got a small crew: a painter, an electrician, and a plumber.</p>
         </section>
 
-        <section class="service">
+        <section class="service" id="service">
             <h2>Services</h2>
 
             <div class="service-container">
@@ -55,7 +55,7 @@
             </div>
         </section>
 
-        <section class="projects-carousel">
+        <section class="projects-carousel" id="projects-carousel">
 
             <h2>Our Completed Projects</h2>
 
@@ -77,9 +77,20 @@
 
         </section>
 
+        <form class="contact-form" id="contact-form">
+            <label>Name: <input type='text' name="username" id="username"></label>
+            <label>Email: <input type='email' name="email" id="email"></label>
+            <label>Message: <textarea name="message" id="message"></textarea></label>
+            <button type="submit">Submit</button>
+            <p id="username-error"></p>
+            <p id="email-error"></p>
+            <p id="message-error"></p>
+            <p id="form-message"></p>
+        </form>
+
     </main>
     <footer>
-        <section class="contact">
+        <section class="contact" id="contact">
 
             <div class="phone">
                 <h2>Contact Us</h2>

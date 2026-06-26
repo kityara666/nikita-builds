@@ -108,3 +108,73 @@ modalNextBtn.addEventListener('click', function(){
             modal.classList.remove('modal-open');
         }
     });
+
+    const username = document.getElementById("username");
+    const email = document.getElementById('email');
+    const message = document.getElementById('message');
+    const nameError = document.getElementById("username-error");
+    const emailError = document.getElementById("email-error");
+    const messageError = document.getElementById("message-error");
+    const messageBox = document.getElementById("form-message");
+
+    username.addEventListener('blur', function(){
+        if (username.value === "") {
+            nameError.textContent="ERROR:Name empty!";
+            nameError.classList.remove("success");
+               nameError.classList.add("error");
+            } else {
+            nameError.textContent="";
+            nameError.classList.remove("error");
+            }
+    });
+
+    email.addEventListener('blur', function(){    
+        if (email.value.includes("@") === false) {
+            emailError.textContent="ERROR:There is no @!";
+            emailError.classList.remove("success");
+            emailError.classList.add("error");
+            } else {
+            emailError.textContent="";
+            emailError.classList.remove("error");
+            }
+    });
+    
+
+    const form = document.getElementById("contact-form");
+    message.addEventListener('blur', function(){
+        if (message.value.length <10) {
+            messageError.textContent="ERROR:Text too short!";
+            messageError.classList.remove("success");
+            messageError.classList.add("error");
+            } else {
+            messageError.textContent="";
+            messageError.classList.remove("error");
+            }
+            
+    });
+
+
+
+    form.addEventListener('submit', function(event){
+        event.preventDefault()
+        
+        messageBox.textContent= "";
+
+        if (username.value === "") {
+                nameError.textContent = "ERROR:Name empty!";
+                nameError.classList.add("error");
+        }   else if (email.value.includes("@") === false) {
+                emailError.textContent = "ERROR:There is no @!";
+                emailError.classList.add("error");
+        }   else if (message.value.length < 10) {
+                messageError.textContent = "ERROR:Text too short!";
+                messageError.classList.add("error");
+        }   else {
+                messageBox.textContent = "Thanks, we'll be in touch!";
+                messageBox.classList.remove("error");
+                messageBox.classList.add("success");
+                username.value = "";
+                email.value = "";
+                message.value = "";}
+                
+    });
