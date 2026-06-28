@@ -77,17 +77,19 @@
 
 
         </section>
-
-        <form class="contact-form" id="contact-form">
-            <label>Name: <input type='text' name="username" id="username"></label>
-            <label>Email: <input type='email' name="email" id="email"></label>
-            <label>Message: <textarea name="message" id="message"></textarea></label>
-            <button type="submit" class="bg-blue-700 text-white px-5 py-2 rounded-full hover:bg-blue-900">Submit</button>
-            <p id="username-error"></p>
-            <p id="email-error"></p>
-            <p id="message-error"></p>
-            <p id="form-message"></p>   
-        </form>
+        
+        <div class="w-full flex justify-center py-10">
+            <form id="contact-form" class="contact-form flex flex-col gap-4 max-w-md p-6 w-full">
+                <label>Name: <input type='text' name="username" id="username" class="border rounded p-2 w-full"></label>
+                <label>Email: <input type='email' name="email" id="email" class="border rounded p-2 w-full"></label>
+                <label>Message: <textarea name="message" id="message" class="border rounded p-2 w-full h-32"></textarea></label>
+                <button type="submit" class="bg-transparent border-2 border-[rgb(0,38,206)] rounded-2xl p-5 transition duration-200 text-[rgb(0,38,206)] hover:bg-[rgb(0,38,206)] hover:text-white">Submit</button>
+                <p id="username-error"></p>
+                <p id="email-error"></p>
+                <p id="message-error"></p>
+                <p id="form-message"></p>   
+            </form>
+        </div>
 
     </main>
     <footer>

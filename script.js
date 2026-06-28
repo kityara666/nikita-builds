@@ -175,7 +175,7 @@ form.addEventListener('submit', function(event){
         messageError.textContent = "ERROR:Text too short!";
         messageError.classList.add("error");
     }
-    if (isValid=true) {
+    if (isValid===true) {
         messageBox.classList.remove("error");
         messageBox.classList.add("success");
         messageBox.textContent='Thanks!'
