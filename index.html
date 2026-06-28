@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nikita-builds</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
 </head>
 <body>
     <header>
@@ -81,11 +82,11 @@
             <label>Name: <input type='text' name="username" id="username"></label>
             <label>Email: <input type='email' name="email" id="email"></label>
             <label>Message: <textarea name="message" id="message"></textarea></label>
-            <button type="submit">Submit</button>
+            <button type="submit" class="bg-blue-700 text-white px-5 py-2 rounded-full hover:bg-blue-900">Submit</button>
             <p id="username-error"></p>
             <p id="email-error"></p>
             <p id="message-error"></p>
-            <p id="form-message"></p>
+            <p id="form-message"></p>   
         </form>
 
     </main>
